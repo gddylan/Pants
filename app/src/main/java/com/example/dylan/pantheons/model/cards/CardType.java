@@ -10,6 +10,7 @@ public enum CardType {
     Science,
     Military,
     VictoryPoint,
+    Pantheon,
     God,
     Wonder,
     ProgressPoint,

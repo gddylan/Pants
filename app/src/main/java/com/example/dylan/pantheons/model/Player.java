@@ -1,11 +1,14 @@
 package com.example.dylan.pantheons.model;
 
 import com.example.dylan.pantheons.model.cards.Card;
+import com.example.dylan.pantheons.model.cards.CardType;
 import com.example.dylan.pantheons.model.rewards.Reward;
 import com.example.dylan.pantheons.model.cards.RewardType;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Dylan on 1/17/2018.
@@ -15,15 +18,24 @@ import java.util.List;
 public class Player {
     public List<Card> cards = new ArrayList<>();
 
-    public List<Card> resourceCards = new ArrayList<>();
-    public List<Card> goldCards = new ArrayList<>();
-    public List<Card> militaryCards = new ArrayList<>();
-    public List<Card> scienceCards = new ArrayList<>();
-    public List<Card> vpCards = new ArrayList<>();
-    public List<Card> pantheonCards = new ArrayList<>();
-    public List<Card> gods = new ArrayList<>();
-    public List<Card> wonders = new ArrayList<>();
-    public List<Card> progressPoints = new ArrayList<>();
+    public Map<CardType, List<Card>> cardMap = new HashMap<CardType, List<Card>>() {
+        CardType.Military : new ArrayList<Card>()
+    };
+    private static final Map<CardType, List<Card>> myMap = createMap();
+    private static Map<CardType, List<Card>> createMap()
+    {
+        Map<CardType,List<Card>> myMap = new HashMap<>();
+        myMap.put(CardType.Resource, new ArrayList<Card>());
+        myMap.put(CardType.Gold, new ArrayList<Card>());
+        myMap.put(CardType.Military, new ArrayList<Card>());
+        myMap.put(CardType.Science, new ArrayList<Card>());
+        myMap.put(CardType.VictoryPoint, new ArrayList<Card>());
+        myMap.put(CardType.Pantheon, new ArrayList<Card>());
+        myMap.put(CardType.God, new ArrayList<Card>());
+        myMap.put(CardType.Wonder, new ArrayList<Card>());
+        myMap.put(CardType.ProgressPoint, new ArrayList<Card>());
+        return myMap;
+    }
 
     public int coins = 0;
     public List<String> links = new ArrayList<>();
@@ -37,16 +49,12 @@ public class Player {
 
     public void add(Card c){
         cards.add(c);
-        addCardToTypedList(c);
+        cardMap.get(c.type).add(c);
 
         for (Reward r : c.rewards)
         {
             r.apply(this);
         }
-    }
-
-    private void addCardToTypedList(Card c) {
-
     }
 
     public void GetCostToPlayer(Card c) {
