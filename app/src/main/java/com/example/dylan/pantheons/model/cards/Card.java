@@ -9,6 +9,9 @@ import java.util.List;
  */
 
 public class Card {
+    // What type of card this is.
+    public CardType type;
+
     // The coin/resource cost printed on the card.
     public ResourceCost resourceCost;
 
@@ -18,8 +21,9 @@ public class Card {
     // The reward you gain for acquiring this card;
     public List<Reward> rewards;
 
-    public Card(ResourceCost rCost, String aCost, List<Reward> r)
+    public Card(CardType t, ResourceCost rCost, String aCost, List<Reward> r)
     {
+        type = t;
         resourceCost = rCost;
         alternateCost = aCost;
         rewards = r;
