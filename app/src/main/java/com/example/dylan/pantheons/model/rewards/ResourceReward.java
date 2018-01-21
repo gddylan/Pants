@@ -7,7 +7,7 @@ import com.example.dylan.pantheons.model.Resource;
  * Created by Dylan on 1/17/2018.
  */
 
-public class ResourceReward extends Reward {
+public class ResourceReward implements Reward {
     private Resource resource;
     private int numResources;
 
