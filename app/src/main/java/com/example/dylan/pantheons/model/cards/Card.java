@@ -2,6 +2,7 @@ package com.example.dylan.pantheons.model.cards;
 
 import com.example.dylan.pantheons.model.rewards.Reward;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -9,6 +10,9 @@ import java.util.List;
  */
 
 public class Card {
+    // The name of the card.
+    public String name;
+
     // What type of card this is.
     public CardType type;
 
@@ -21,12 +25,12 @@ public class Card {
     // The reward you gain for acquiring this card;
     public List<Reward> rewards;
 
-    public Card(CardType t, ResourceCost rCost, String aCost, List<Reward> r)
+    public Card(String name, CardType t, ResourceCost rCost, String aCost, Reward... r)
     {
         type = t;
         resourceCost = rCost;
         alternateCost = aCost;
-        rewards = r;
+        rewards = Arrays.asList(r);
     }
 
     // The number of coins it would cost the player to purchase this card, based on their resources.

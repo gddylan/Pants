@@ -5,11 +5,11 @@ package com.example.dylan.pantheons.model;
  */
 
 public enum Resource {
-    Wood,
-    Clay,
-    Rock,
-    Paper,
-    Glass,
-    AnyBasic,
-    AnyAdvanced
+    WOOD,
+    CLAY,
+    ROCK,
+    PAPER,
+    GLASS,
+    ANY_BASIC,
+    ANY_ADVANCED
 }
