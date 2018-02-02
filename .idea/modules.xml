@@ -4,8 +4,9 @@
     <modules>
       <module fileurl="file://C:\Users\Dylan\Documents\GitHub\Pants\Pantheons.iml" filepath="C:\Users\Dylan\Documents\GitHub\Pants\Pantheons.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pants.iml" filepath="$PROJECT_DIR$/Pants.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\ddyla\Documents\GitHub\Pants\Pants.iml" filepath="C:\Users\ddyla\Documents\GitHub\Pants\Pants.iml" />
       <module fileurl="file://C:\Users\Dylan\Documents\GitHub\Pants\app\app.iml" filepath="C:\Users\Dylan\Documents\GitHub\Pants\app\app.iml" />
+      <module fileurl="file://C:\Users\ddyla\Documents\GitHub\Pants\app\app.iml" filepath="C:\Users\ddyla\Documents\GitHub\Pants\app\app.iml" />
     </modules>
   </component>
 </project>
