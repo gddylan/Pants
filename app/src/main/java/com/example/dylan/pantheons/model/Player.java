@@ -2,7 +2,7 @@ package com.example.dylan.pantheons.model;
 
 import com.example.dylan.pantheons.model.cards.Card;
 import com.example.dylan.pantheons.model.cards.CardType;
-import com.example.dylan.pantheons.model.cards.Science;
+import com.example.dylan.pantheons.model.rewards.Science;
 import com.example.dylan.pantheons.model.rewards.Reward;
 
 import java.util.ArrayList;

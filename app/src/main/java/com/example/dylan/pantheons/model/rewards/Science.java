@@ -1,4 +1,4 @@
-package com.example.dylan.pantheons.model.cards;
+package com.example.dylan.pantheons.model.rewards;
 
 import com.example.dylan.pantheons.model.Player;
 import com.example.dylan.pantheons.model.rewards.Reward;

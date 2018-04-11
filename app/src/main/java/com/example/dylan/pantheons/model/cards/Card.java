@@ -25,11 +25,11 @@ public class Card {
     // The reward you gain for acquiring this card;
     public List<Reward> rewards;
 
-    public Card(String name, CardType t, ResourceCost rCost, String aCost, Reward... r)
+    public Card(String name, CardType ct, ResourceCost resCost, String altCost, Reward... r)
     {
-        type = t;
-        resourceCost = rCost;
-        alternateCost = aCost;
+        type = ct;
+        resourceCost = resCost;
+        alternateCost = altCost;
         rewards = Arrays.asList(r);
     }
 

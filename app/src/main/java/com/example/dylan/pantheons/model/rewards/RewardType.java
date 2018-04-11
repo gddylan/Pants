@@ -1,4 +1,4 @@
-package com.example.dylan.pantheons.model.cards;
+package com.example.dylan.pantheons.model.rewards;
 
 /**
  * Created by Dylan on 1/17/2018.
